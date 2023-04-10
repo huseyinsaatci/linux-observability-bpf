@@ -1,0 +1,24 @@
+metrics:
+  counters:
+    - name: perf_cpu_instruction_map
+      help: CPU instructions per task
+      labels:
+        - name: cpu_id
+          size: 4
+          decoders:
+            - name: uint
+        - name: task
+          size: 16
+          decoders:
+            - name: string
+    - name: perf_cpu_cycle_map
+      help: CPU cycles per task
+      labels:
+        - name: cpu_id
+          size: 4
+          decoders:
+            - name: uint
+        - name: task
+          size: 16
+          decoders:
+            - name: string

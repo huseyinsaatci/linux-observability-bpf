@@ -1,0 +1,5 @@
+/vendor
+/prometheus*
+.vscode
+/grafana*
+ebpf_exporter*

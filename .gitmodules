@@ -1,0 +1,3 @@
+[submodule "ebpf_exporter"]
+	path = ebpf_exporter
+	url = https://github.com/huseyinsaatci/ebpf_exporter.git

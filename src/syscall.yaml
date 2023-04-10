@@ -1,0 +1,9 @@
+metrics:
+  counters:
+    - name: syscall_map
+      help: Displays which syscall called how many times
+      labels:
+        - name: syscall
+          size: 8
+          decoders:
+            - name: syscall
