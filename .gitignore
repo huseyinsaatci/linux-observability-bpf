@@ -3,3 +3,4 @@
 .vscode
 /grafana-*
 ebpf_exporter*
+*.png

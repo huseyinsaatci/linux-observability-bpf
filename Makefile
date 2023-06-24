@@ -27,11 +27,12 @@ test:
 	go test -v ./...
 
 compile:
-	$(go_env) go build -C ./ebpf_exporter -o ebpf_exporter_exe -v $(GO_LDFLAGS) ./cmd/ebpf_exporter
+	$(go_env) go build -C ./ebpf_exporter -o ebpf_exporter.bin -v $(GO_LDFLAGS) ./cmd/ebpf_exporter
 
 .PHONY: build
 build: compile
-	$(shell cp ./ebpf_exporter/ebpf_exporter_exe ./)
+	$(shell rm ebpf_exporter.bin & cp ./ebpf_exporter/ebpf_exporter.bin ./)
+	$(shell rm -f ./ebpf_exporter/ebpf_exporter.bin)
 
 run:
-	sudo ./ebpf_exporter_exe --config.dir src --config.names $(program)
+	sudo ./ebpf_exporter.bin --config.dir src --config.names $(program)
